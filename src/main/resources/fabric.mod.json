@@ -1,0 +1,25 @@
+{
+    "schemaVersion": 1,
+    "id": "sunnyriptide",
+    "version": "${version}",
+    "name": "Sunny Riptide",
+    "description": "A Minecraft mod which allows the use of Riptide trident at any time.",
+    "authors": [
+        "Chantwilight"
+    ],
+    "contact": {
+    },
+    "license": "CC0-1.0",
+    "icon": "assets/sunnyriptide/icon.png",
+    "environment": "*",
+    "entrypoints": {
+    },
+    "mixins": [
+        "sunnyriptide.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.0",
+        "minecraft": "${minecraft_version}",
+        "java": ">=21"
+    }
+}

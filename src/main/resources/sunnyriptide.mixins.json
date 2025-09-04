@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.sunnyriptide.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+    ],
+    "client": [
+        "TridentItemMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
