@@ -22,6 +22,10 @@ Or even in the Nether:
 
 This is a complete client-side mod, no additional content needs to be installed on the server.
 
+## Download
+
+You can now download this mod on [CurseForge](https://curseforge.com/minecraft/mc-mods/sunny-riptide-trident).
+
 ## License
 
 This project is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
