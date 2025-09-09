@@ -11,11 +11,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class TridentItemMixin {
     @Redirect(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isTouchingWaterOrRain()Z"))
     private boolean useAlwaysTouchingWaterOrRain(PlayerEntity instance) {
-        return SunnyRiptide.allowSunnyRiptide || instance.isTouchingWaterOrRain();
+        return (SunnyRiptide.allowSunnyRiptide == 1) || instance.isTouchingWaterOrRain();
     }
 
     @Redirect(method = "onStoppedUsing", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isTouchingWaterOrRain()Z"))
     private boolean releaseAlwaysTouchingWaterOrRain(PlayerEntity instance) {
-        return SunnyRiptide.allowSunnyRiptide || instance.isTouchingWaterOrRain();
+        return (SunnyRiptide.allowSunnyRiptide == 1) || instance.isTouchingWaterOrRain();
     }
 }

@@ -6,10 +6,10 @@ import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.util.Identifier;
 
-public record SunnyRiptidePayload(boolean enabled) implements CustomPayload {
+public record SunnyRiptidePayload(int enabled) implements CustomPayload {
     public static final Id<SunnyRiptidePayload> ID = new Id<>(Identifier.of(SunnyRiptide.MOD_ID, "enabled"));
     public static final PacketCodec<PacketByteBuf, SunnyRiptidePayload> CODEC = PacketCodec.tuple(
-            PacketCodecs.BOOL, SunnyRiptidePayload::enabled,
+            PacketCodecs.INTEGER, SunnyRiptidePayload::enabled,
             SunnyRiptidePayload::new);
 
     @Override

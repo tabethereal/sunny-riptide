@@ -22,7 +22,7 @@ import static net.minecraft.server.command.CommandManager.literal;
 
 public class SunnyRiptide implements ModInitializer {
     public static final String MOD_ID = "sunnyriptide";
-    public static boolean allowSunnyRiptide = false;
+    public static int allowSunnyRiptide = 0;
 
     @Override
     public void onInitialize() {
@@ -42,13 +42,13 @@ public class SunnyRiptide implements ModInitializer {
                 .requires((source) -> source.hasPermissionLevel(2))
                 .then(argument("enabled", BoolArgumentType.bool())
                         .executes((context) -> {
-                            final boolean enabled = BoolArgumentType.getBool(context, "enabled");
+                            final int enabled = BoolArgumentType.getBool(context, "enabled") ? 1 : 0;
                             if (SunnyRiptide.allowSunnyRiptide != enabled) {
                                 SunnyRiptide.allowSunnyRiptide = enabled;
                                 for (ServerPlayerEntity player : context.getSource().getWorld().getPlayers())
                                     ServerPlayNetworking.send(player, new SunnyRiptidePayload(allowSunnyRiptide));
                             }
-                            context.getSource().sendFeedback(() -> Text.literal("Sunny Riptide enabled: %b".formatted(enabled)), true);
+                            context.getSource().sendFeedback(() -> Text.literal("Sunny Riptide enabled: %b".formatted(enabled == 1)), true);
                             return 1;
                         })
                 );
