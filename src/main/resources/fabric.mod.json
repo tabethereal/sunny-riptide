@@ -16,6 +16,9 @@
     "entrypoints": {
         "main": [
             "com.sunnyriptide.SunnyRiptide"
+        ],
+        "client": [
+            "com.sunnyriptide.SunnyRiptideClient"
         ]
     },
     "mixins": [
