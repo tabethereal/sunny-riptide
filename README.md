@@ -24,7 +24,11 @@ This is a complete client-side mod, no additional content needs to be installed 
 
 ## Download
 
-You can now download this mod on [CurseForge](https://curseforge.com/minecraft/mc-mods/sunny-riptide-trident).
+You can now download this mod on CurseForge and Modrinth.
+
+CurseForge: https://curseforge.com/minecraft/mc-mods/sunny-riptide-trident
+
+Modrinth: https://modrinth.com/mod/sunny-riptide-trident
 
 ## License
 
